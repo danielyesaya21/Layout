@@ -4,11 +4,11 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="coloWhite">#FFFFFF</color>
-    <color name="colorBlackTrans">#1B000000</color>
+    <color name="colorBlackTrans">#80DADADA</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorpink">#F6D9D9</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorGray">#CDCDCD</color>
+    <color name="colorGray">#EDEDED</color>
     <color name="transparant">#00FFFFFF</color>
 
 </resources>
