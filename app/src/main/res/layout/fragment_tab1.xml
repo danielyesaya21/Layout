@@ -198,7 +198,7 @@
 
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textViewHarga"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView9"
@@ -208,7 +208,7 @@
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="142dp"
                         android:layout_toEndOf="@+id/textView11"
-                        android:text="Rp 195.000 "
+                        android:text="Rp 195.000"
                         android:textColor="#80757575"
                         android:textSize="12sp" />
 

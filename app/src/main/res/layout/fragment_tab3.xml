@@ -199,7 +199,7 @@
 
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textViewHarga"
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/textView9"

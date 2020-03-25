@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
@@ -30,9 +32,9 @@ import com.kingfisher.easyviewindicator.RecyclerViewIndicator;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import static com.google.android.material.internal.ViewUtils.dpToPx;
+
 public class MainActivity extends AppCompatActivity {
-
-
 
 
     RecyclerView paket;
@@ -51,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     RecyclerViewIndicator indicator;
 
 
-    TextView textView13;
 
 
 
@@ -62,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         paket = findViewById(R.id.paket);
         indicator = findViewById(R.id.indicator);
-        textView13 = (TextView)findViewById(R.id.textView13);
-//        textView13.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
         tab = (TabLayout)findViewById(R.id.tab);
         tab1 = (TabItem)findViewById(R.id.tab1);
         tab2 = (TabItem)findViewById(R.id.tab2);
@@ -84,12 +84,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(button3.isChecked()) {
-                    layoutParams1.width = 1000;
+
+                    layoutParams1.width = convertDpToPx(400);
                     expand1.setLayoutParams(layoutParams1);
                     expand2.setVisibility(View.INVISIBLE);
                 }
                 else{
-                    layoutParams1.width = 300;
+                    layoutParams1.width = convertDpToPx(164);
                     expand1.setLayoutParams(layoutParams1);
                     expand2.setVisibility(View.VISIBLE);
                 }
@@ -100,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(button4.isChecked()) {
-                    layoutParams2.width = 1000;
+                    layoutParams2.width = convertDpToPx(400);
                     expand2.setLayoutParams(layoutParams2);
                     expand1.setVisibility(View.INVISIBLE);
+
                 }
                 else{
-                    layoutParams2.width = 300;
+                    layoutParams2.width = convertDpToPx(164);
                     expand2.setLayoutParams(layoutParams2);
                     expand1.setVisibility(View.VISIBLE);
                 }
@@ -163,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private int convertDpToPx(int dp) {
+        return (int) (dp * getResources().getDisplayMetrics().density);
+    }
 
 
     public void dataList(){
@@ -188,6 +193,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 }
